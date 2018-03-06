@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<div class="panel-title"><h3><%= @post.title %></h3>
+		</div>
+	</div>	
+		<div class="panel-body">
+			<p>
+			  <strong>By:</strong>
+			  <%= link_to @post.user.username, user_posts_path(name: @post.user.username) %>
+			</p>
+			<br>
+			<p>
+			  <strong>Blog entry:</strong>
+			  <p><em>posted on <%= @post.created_at.strftime("%B %e, %Y at %l:%M %p") %></em></p>
+			  <%= @post.blog_entry.html_safe %>
+			</p>
+
+			<% if current_user.id == @post.user_id %>
+				<%= link_to 'Edit', edit_post_path(@post) %>
+			<% end %>
+			<div id="comments">
+				<h3>Comments</h3>
+				
+				<% @post.comments.each do |comment| %>
+				<div class="well well-sm">
+					<p>
+						<p><em>on <%= comment.created_at.strftime("%B %e, %Y at %l:%M %p") %></em></p>
+						<strong><%= link_to comment.user.username, user_posts_path(name: comment.user.username) %></strong> said...<br>
+					</p>
+					<p>
+						<%= comment.comment_entry%>
+					</p>
+				</div>
+				<% end %>
+				
+				<%= render 'comments/form', comment: @comment %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+</div>
+<br>
+<br>

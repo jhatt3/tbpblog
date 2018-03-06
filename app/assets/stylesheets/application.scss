@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+    background-color: #bebcb7;
+    color: #000000;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 40px;
+}
+
+.user {
+    margin: 15px 10px;
+    display: inline-block;
+    padding: 0;
+}
+
+.btn-xs {
+    background-color: #d78e27;
+    border: 5px;
+    border-color: #000000;
+    margin: -2px -2px ;
+    border-radius: 0;
+}
+
+.btn-xs:hover {
+    background-color: #990033;
+    color: #f3f3f3;
+}
+
+.jumbotron {
+    background-image: url(IMG_5342.jpg);
+    background-position: 0% 25%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #990033;
+    height: 300px;
+    width: 100%;
+    text-shadow: #d78e27 0.1em 0.1em 0.3em;
+    z-index: -1;
+    margin-top: 0;
+}
+
+.footer {
+    background-color: #d78e27;
+    color: #000000;
+    margin-top: 30px;
+    padding: 0;
+    height: 100px;
+
+}
+.social {
+    list-style: none;
+    justify-content: center;
+    padding-left: 0;
+}
+.contact {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact :hover {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.contact a{
+    color: #000000;
+    padding-bottom: 0;
+}
+
+// #logo_bottom {
+//     width: 60px;
+//     background-image: url(images/final_png.png);
+//     justify-content: center;
+// }
+
+.rights {
+    align-items: right;
+}
+
+
+.navbar {
+    background-color: #d78e27;
+    color: #000000;
+
+}
+
+.head_container a {
+    color: #000000;
+    margin-top: 0;
+}
+
+.head_container {
+    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+}
+
+.icon-bar {
+    background-color: #000000;
+}
+
+.navbar ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+}
+
+th {
+    background-color: #d78e27;
+    color: #000000;   
+}
+
+.table-fixed {
+    width: 100%;
+    background-color: #f3f3f3;
+    background: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+}
+
+.table-fixed{
+    width: 100%;
+    background-color: none;
+}
+
+tbody {
+    height: 100px;
+    overflow-y: auto;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
