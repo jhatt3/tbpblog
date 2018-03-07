@@ -9,14 +9,14 @@
 	</div>	
 		<div class="panel-body">
 			<p>
-			  <strong>By:</strong>
-			  <%= link_to @post.user.username, user_posts_path(name: @post.user.username) %>
+			<strong>By:</strong>
+			<%= link_to @post.user.username, user_posts_path(name: @post.user.username) %>
 			</p>
 			<br>
 			<p>
-			  <strong>Blog entry:</strong>
-			  <p><em>posted on <%= @post.created_at.strftime("%B %e, %Y at %l:%M %p") %></em></p>
-			  <%= @post.blog_entry.html_safe %>
+			<strong>Blog entry:</strong>
+			<p><em>posted on <%= @post.created_at.strftime("%B %e, %Y at %l:%M %p") %></em></p>
+			<%= @post.blog_entry.html_safe %>
 			</p>
 
 			<% if current_user.id == @post.user_id %>
